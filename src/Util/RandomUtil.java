@@ -1,5 +1,7 @@
 package Util;
 
+import Bean.Moment;
+
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Set;
@@ -66,6 +68,7 @@ public class RandomUtil implements IRandomUtil {
         return ip;
     }
 
+
     /**
      * 将十进制转换成IP地址
      *
@@ -107,6 +110,48 @@ public class RandomUtil implements IRandomUtil {
         return sb.toString();
     }
 
+    @Override
+    public void addIpToIps(String ip) {
+        if (ips == null) {
+            ips = new ArrayList<>();
+        }
+        if (!ips.contains(ip)) {
+            ips.add(ip);
+        }
+
+    }
+
+    @Override
+    public Moment buildRandomMoment(int seed) {
+        /**
+         * router：
+         *         "接收到来自主机：ip 的报文"
+         *         "发送报文到主机：ip "
+         * host:
+         *          "接收到来自主机：ip 的报文"
+         *          "发送报文到主机：ip"
+         */
+
+        String content = "";
+        int randI = randInt(0, 1);
+        String ip = buildRandomIp(seed);
+        if (randI == 0) {
+            content = content + "接收来自主机：" + ip + "的报文";
+        } else {
+            content = content + "发送报文到主机：" + ip;
+        }
+
+
+        Moment moment = new Moment(content, 0);
+
+        return moment;
+    }
+
+    @Override
+    public Moment buildRandomMoment() {
+        return buildRandomMoment(randInt(0, 10000));
+    }
+
 
     @Override
     public int getRandomPort() {
@@ -115,14 +160,16 @@ public class RandomUtil implements IRandomUtil {
     }
 
     @Override
-    public String getRandomIp(String selfIp) {
+    public String getRandomIpForSendMessage(String selfIp) {
         if (ips != null) {
-            int index = randInt(0, ips.size());
+            int index = randInt(0, ips.size() - 1);
             if (ips.get(index).equals(selfIp)) {
                 if (index + 1 < ips.size()) {
                     return ips.get(index + 1);
-                } else {
+                } else if (index - 1 > 0) {
                     return ips.get(index - 1);
+                } else {
+                    return null;
                 }
             } else {
                 return ips.get(index);

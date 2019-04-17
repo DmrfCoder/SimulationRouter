@@ -8,12 +8,18 @@ import Bean.Message;
  */
 public interface IRouteInterface {
 
-    void receiveMessage(Message message);
+    boolean inputMessage(Message message);
 
-    boolean sendMessage(Message message);
+    boolean outputMessage(Message message);
 
+    void setUpdatePercentageListener(UpdatePercentageListener updatePercentageListener);
 
-    class ReceivingMemory {
-
+    interface UpdatePercentageListener {
+        void updatePercentage(String hostIp,float percentage);
     }
+
+    interface UpdateInputMessageMomentListener{
+        void inputMessageMoment(Message message);
+    }
+
 }

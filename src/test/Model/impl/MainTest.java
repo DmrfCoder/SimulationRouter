@@ -1,12 +1,12 @@
 package test.Model.impl;
 
-import Model.impl.Main;
+import Model.impl.MainModel;
 import org.junit.Test;
 import org.junit.Before;
 import org.junit.After;
 
 /**
- * Main Tester.
+ * MainModel Tester.
  *
  * @author <Authors name>
  * @version 1.0
@@ -14,11 +14,11 @@ import org.junit.After;
  */
 public class MainTest {
 
-    private Main main;
+    private MainModel main;
 
     @Before
     public void before() throws Exception {
-        main=new Main();
+       // main=new MainModel();
     }
 
     @After
@@ -34,15 +34,10 @@ public class MainTest {
     }
 
     /**
-     * Method: getRandomIp(int seed)
+     * Method: getRandomIpForSendMessage(int seed)
      */
     @Test
     public void testGetRandomIp() throws Exception {
-        System.out.println(main.getRandomIp(0));
-        System.out.println(main.getRandomIp(1));
-        System.out.println(main.getRandomIp(2));
-        System.out.println(main.getRandomIp(3));
-        System.out.println(main.getRandomIp(4));
     }
 
 
@@ -54,7 +49,7 @@ public class MainTest {
 //TODO: Test goes here... 
 /* 
 try { 
-   Method method = Main.getClass().getMethod("num2ip", int.class); 
+   Method method = MainModel.getClass().getMethod("num2ip", int.class);
    method.setAccessible(true); 
    method.invoke(<Object>, <Parameters>); 
 } catch(NoSuchMethodException e) { 

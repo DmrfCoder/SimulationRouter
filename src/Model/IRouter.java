@@ -1,7 +1,9 @@
 package Model;
 
+import Bean.Memory;
 import Bean.Message;
 import Model.impl.Host;
+import Model.impl.RouterInterface;
 
 /**
  * @author dmrfcoder
@@ -9,7 +11,15 @@ import Model.impl.Host;
  */
 public interface IRouter {
 
-    void registHost(Host host);
+    RouterInterface registHost(Host host);
+
+    void readAndHandleMemory();
+
+    boolean sendMessageToHost(Message message);
+
+    void startReadMemoryTask();
+
+    void stopReadMemoryTask();
 
 
 }

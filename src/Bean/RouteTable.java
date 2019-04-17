@@ -13,7 +13,7 @@ public class RouteTable {
     private Map<String, RouterInterface> routeTable;
 
     public void registHost(Host host) {
-        routeTable.put(host.getIp(), new RouterInterface(host));
+        routeTable.put(host.getIp(), host.getRouterInterface());
     }
 
 }

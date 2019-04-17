@@ -3,6 +3,7 @@ package Model.impl;
 import Bean.Memory;
 import Bean.Message;
 import Model.IRouteInterface;
+import com.sun.istack.internal.NotNull;
 
 /**
  * @author dmrfcoder
@@ -13,19 +14,64 @@ public class RouterInterface implements IRouteInterface {
 
     private Memory memory;
 
-    public RouterInterface(Host host) {
+    private int port;
+
+    private UpdatePercentageListener updatePercentageListener;
+
+    private UpdateInputMessageMomentListener updateInputMessageMomentListener;
+
+    public Memory getMemory() {
+        return memory;
+    }
+
+    public Host getHost() {
+        return host;
+    }
+
+    public RouterInterface(Host host, int port,  UpdateInputMessageMomentListener updateInputMessageMomentListener,int memorySize) {
         this.host = host;
+        this.port = port;
         memory = new Memory(2);
-    }
-
-    @Override
-    public void receiveMessage(Message message) {
+        this.updateInputMessageMomentListener=updateInputMessageMomentListener;
 
     }
 
-    @Override
-    public boolean sendMessage(Message message) {
+    public RouterInterface(Host host, int port, UpdateInputMessageMomentListener updateInputMessageMomentListener) {
+        this.host = host;
+        this.port = port;
+        memory = new Memory(2);
+        this.updateInputMessageMomentListener=updateInputMessageMomentListener;
 
+    }
+
+
+    public int getPort() {
+        return port;
+    }
+
+    @Override
+    public boolean inputMessage(Message message) {
+
+        float percentage = memory.getMemoryPercentage();
+        if (updatePercentageListener != null) {
+            updatePercentageListener.updatePercentage(host.getIp(), percentage);
+        }
+        updateInputMessageMomentListener.inputMessageMoment(message);
         return memory.addContentToMemory(message);
+    }
+
+    @Override
+    public boolean outputMessage(Message message) {
+        float percentage = memory.getMemoryPercentage();
+        if (percentage > 1) {
+            percentage = 1;
+        }
+        updatePercentageListener.updatePercentage(host.getIp(), percentage);
+        return host.inputMessage(message);
+    }
+
+    @Override
+    public void setUpdatePercentageListener(UpdatePercentageListener updatePercentageListener) {
+        this.updatePercentageListener = updatePercentageListener;
     }
 }

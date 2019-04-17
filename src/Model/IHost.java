@@ -9,10 +9,14 @@ import java.util.ArrayList;
  * @date 2019-04-13
  */
 public interface IHost {
-    void sendMessage(int  messageCount);
+    boolean outputMessage();
 
-    void receiveMessage(Message message);
+    boolean inputMessage(Message message);
 
     ArrayList<Message> buildMessages(int messageCount);
+
+    void startSendMessage(int messageCount);
+
+    void stopSendMessage();
 
 }
