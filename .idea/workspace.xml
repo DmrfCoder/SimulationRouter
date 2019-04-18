@@ -2,48 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ebbf6414-77b7-440f-811b-8ee2477f85c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/res/background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/APP.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Bean/Moment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Configure/ViewConfigure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Listener/RouterAndHostMomentStrListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Presenter/IMainPresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Presenter/MainPresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Util/PrintUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/IMainView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/IMemoryCircleView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/IMomentsView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/MainView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/MemoryCircleView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/MomentsView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/SwichButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Configure/RouterAndHostConfigure.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimulationRouter/Bean/Memory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimulationRouter/Bean/Memory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SimulationRouter/Bean/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimulationRouter/Bean/Message.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationRouter/Bean/RouteTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimulationRouter/Bean/RouteTable.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SimulationRouter/Model/IHost.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimulationRouter/Model/IHost.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationRouter/Model/IMain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationRouter/Model/IRouteInterface$ReceivingMemory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationRouter/Model/IRouteInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimulationRouter/Model/IRouteInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationRouter/Model/IRouter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimulationRouter/Model/IRouter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimulationRouter/Model/IRouteInterface$UpdatePercentageListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimulationRouter/Model/IRouteInterface$UpdatePercentageListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SimulationRouter/Model/impl/Host.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimulationRouter/Model/impl/Host.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationRouter/Model/impl/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimulationRouter/Model/impl/MainModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimulationRouter/Model/impl/MainModel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SimulationRouter/Model/impl/Router.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimulationRouter/Model/impl/Router.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SimulationRouter/Model/impl/RouterInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimulationRouter/Model/impl/RouterInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationRouter/test/Model/impl/MainTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimulationRouter/test/Model/impl/MainTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimulationRouter/Presenter/IMainPresenter$UpdatePercentageListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimulationRouter/Presenter/IMainPresenter$UpdatePercentageListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimulationRouter/Presenter/MainPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimulationRouter/Presenter/MainPresenter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimulationRouter/View/IMainView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimulationRouter/View/IMainView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimulationRouter/View/MainView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimulationRouter/View/MainView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimulationRouter/View/MemoryCircleView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimulationRouter/View/MemoryCircleView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimulationRouter/View/MomentsView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimulationRouter/View/MomentsView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimulationRouter/View/SwichButton$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimulationRouter/View/SwichButton$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimulationRouter/View/SwichButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimulationRouter/View/SwichButton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimulationRouter/test/Model/impl/HostTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimulationRouter/test/Model/impl/HostTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Bean/Memory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bean/Memory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Bean/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bean/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bean/RouteTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bean/RouteTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/IHost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/IHost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/IMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/IMainModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/IRouteInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/IRouteInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/IRouter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/IRouter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/impl/Host.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/impl/Host.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/impl/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/impl/MainModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/impl/MainModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/impl/MainModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/impl/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/impl/Router.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/impl/RouterInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/impl/RouterInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Util/IRandomUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/IRandomUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Util/RandomUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/RandomUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/Model/impl/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Model/impl/MainTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Presenter/IMainPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Presenter/IMainPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Presenter/MainPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Presenter/MainPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/IMainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/IMainView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/MainView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/MemoryCircleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/MemoryCircleView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/MomentsView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/MomentsView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/SwichButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/SwichButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/Model/impl/HostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Model/impl/HostTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,18 +51,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/View/MainView.java">
+        <entry file="file://$PROJECT_DIR$/src/test/Model/impl/HostTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="222" lean-forward="true" selection-start-line="222" selection-end-line="222" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#setDiyBackGround#0;class#MainView#0" />
-                <element signature="method#enableOSXFullscreen#0;class#MainView#0" />
-                <element signature="method#requestOSXFullscreen#0;class#MainView#0" />
-                <element signature="e#10803#10804#0" expanded="true" />
-                <element signature="e#10844#10845#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="285">
+              <caret line="82" column="30" selection-start-line="82" selection-start-column="30" selection-end-line="82" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -77,8 +62,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/View/MomentsView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="121" column="94" selection-start-line="121" selection-start-column="94" selection-end-line="121" selection-end-column="94" />
+            <state relative-caret-position="228">
+              <caret line="113" column="57" selection-start-line="113" selection-start-column="55" selection-end-line="113" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,14 +71,95 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/View/MemoryCircleView.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Configure/RouterAndHostConfigure.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="81" column="33" selection-start-line="81" selection-start-column="33" selection-end-line="81" selection-end-column="33" />
+            <state relative-caret-position="135">
+              <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/impl/Host.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="75" column="47" lean-forward="true" selection-start-line="75" selection-start-column="47" selection-end-line="75" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#926#927#0" expanded="true" />
+                <element signature="e#951#952#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/IHost.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/impl/Router.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="118" column="123" selection-start-line="118" selection-start-column="123" selection-end-line="118" selection-end-column="123" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/impl/RouterInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="54" column="46" selection-start-line="54" selection-start-column="46" selection-end-line="54" selection-end-column="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/IRouteInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="60" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Bean/Memory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="626">
+              <caret line="58" column="16" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#385#386#0" expanded="true" />
+                <element signature="e#436#437#0" expanded="true" />
+                <element signature="e#474#475#0" expanded="true" />
+                <element signature="e#516#517#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/Vector.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-274">
+              <caret line="85" column="13" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -130,10 +196,8 @@
         <option value="$PROJECT_DIR$/src/Model/IMain.java" />
         <option value="$PROJECT_DIR$/src/Util/PrintUtil.java" />
         <option value="$PROJECT_DIR$/src/Bean/RouteTable.java" />
-        <option value="$PROJECT_DIR$/src/test/Model/impl/HostTest.java" />
         <option value="$PROJECT_DIR$/src/Model/IRouter.java" />
         <option value="$PROJECT_DIR$/src/Model/impl/Main.java" />
-        <option value="$PROJECT_DIR$/src/Model/IHost.java" />
         <option value="$PROJECT_DIR$/src/View/IMemoryCircleView.java" />
         <option value="$PROJECT_DIR$/src/APP.java" />
         <option value="$PROJECT_DIR$/src/View/mainviewform.form" />
@@ -141,24 +205,30 @@
         <option value="$PROJECT_DIR$/src/Util/IRandomUtil.java" />
         <option value="$PROJECT_DIR$/src/Util/RandomUtil.java" />
         <option value="$PROJECT_DIR$/src/View/IMomentsView.java" />
-        <option value="$PROJECT_DIR$/src/Bean/Moment.java" />
-        <option value="$PROJECT_DIR$/src/View/SwichButton.java" />
-        <option value="$PROJECT_DIR$/src/Bean/Message.java" />
-        <option value="$PROJECT_DIR$/src/Bean/Memory.java" />
-        <option value="$PROJECT_DIR$/src/View/MemoryCircleView.java" />
-        <option value="$PROJECT_DIR$/src/Presenter/IMainPresenter.java" />
         <option value="$PROJECT_DIR$/src/test/Model/impl/MainTest.java" />
         <option value="$PROJECT_DIR$/src/Listener/RouterAndHostMomentStrListener.java" />
-        <option value="$PROJECT_DIR$/src/Model/impl/Host.java" />
-        <option value="$PROJECT_DIR$/src/Presenter/MainPresenter.java" />
-        <option value="$PROJECT_DIR$/src/Model/IRouteInterface.java" />
-        <option value="$PROJECT_DIR$/src/Model/impl/Router.java" />
         <option value="$PROJECT_DIR$/src/Model/IMainModel.java" />
-        <option value="$PROJECT_DIR$/src/Model/impl/RouterInterface.java" />
-        <option value="$PROJECT_DIR$/src/Model/impl/MainModel.java" />
+        <option value="$PROJECT_DIR$/src/Bean/Message.java" />
+        <option value="$PROJECT_DIR$/src/View/SwichButton.java" />
         <option value="$PROJECT_DIR$/src/View/IMainView.java" />
-        <option value="$PROJECT_DIR$/src/View/MomentsView.java" />
+        <option value="$PROJECT_DIR$/src/Presenter/MainPresenter.java" />
+        <option value="$PROJECT_DIR$/src/Presenter/IMainPresenter.java" />
+        <option value="$PROJECT_DIR$/src/View/MemoryCircleView.java" />
         <option value="$PROJECT_DIR$/src/View/MainView.java" />
+        <option value="$PROJECT_DIR$/src/Bean/Moment.java" />
+        <option value="$PROJECT_DIR$/src/Model/IHost.java" />
+        <option value="$PROJECT_DIR$/src/test/Model/impl/HostTest.java" />
+        <option value="$PROJECT_DIR$/src/Model/impl/MainModel.java" />
+        <option value="$PROJECT_DIR$/src/Model/impl/Host.java" />
+        <option value="$PROJECT_DIR$/src/View/MomentsView.java" />
+        <option value="$PROJECT_DIR$/src/Configure/RouterAndHostConfig.java" />
+        <option value="$PROJECT_DIR$/src/Configure/RouterAndHostConfige.java" />
+        <option value="$PROJECT_DIR$/src/Bean/ReceiveAndSend.java" />
+        <option value="$PROJECT_DIR$/src/Model/IRouteInterface.java" />
+        <option value="$PROJECT_DIR$/src/Model/impl/RouterInterface.java" />
+        <option value="$PROJECT_DIR$/src/Model/impl/Router.java" />
+        <option value="$PROJECT_DIR$/src/Configure/RouterAndHostConfigure.java" />
+        <option value="$PROJECT_DIR$/src/Bean/Memory.java" />
       </list>
     </option>
   </component>
@@ -174,7 +244,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -241,6 +310,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -362,7 +432,8 @@
       <workItem from="1555319469914" duration="998000" />
       <workItem from="1555335202039" duration="5606000" />
       <workItem from="1555412395287" duration="12149000" />
-      <workItem from="1555467761915" duration="25757000" />
+      <workItem from="1555467761915" duration="25881000" />
+      <workItem from="1555560946562" duration="9120000" />
     </task>
     <servers />
   </component>
@@ -384,13 +455,22 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45746000" />
+    <option name="totallyTimeSpent" value="54990000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26752505" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18955651" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -399,16 +479,16 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.15060242" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36385542" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.26746988" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25662652" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.17590362" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32891566" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32891566" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.24457832" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49928468" weight="0.24457832" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5007153" side_tool="true" weight="0.24457832" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32891566" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -456,45 +536,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/Random.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="134" column="11" selection-start-line="134" selection-start-column="11" selection-end-line="134" selection-end-column="11" />
-          <folding>
-            <element signature="e#3504#3505#0" expanded="true" />
-            <element signature="e#3562#3563#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/Model.impl.Router">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>Model.impl.Router</OriginalElement>
-          <nodes>
-            <node x="0.0" y="142.0">Model.impl.Router</node>
-            <node x="18.5" y="0.0">Model.IRouter</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="Model.impl.Router" target="Model.IRouter">
-              <point x="0.0" y="-91.0" />
-              <point x="0.0" y="46.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="-109.0" y="13.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Fields</Category>
-            <Category>Constructors</Category>
-            <Category>Methods</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://JAVA/Model.impl.Host">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -541,13 +582,6 @@
             <element signature="e#265#266#0" expanded="true" />
             <element signature="e#336#337#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/Model/impl/HostTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-653">
-          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -636,15 +670,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/mainviewform.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/mainviewform.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/background.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/mainviewform.java" />
+    <entry file="file://$PROJECT_DIR$/src/View/mainviewform.form" />
+    <entry file="file://$PROJECT_DIR$/res/background.jpg" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/awt/Color.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="268">
@@ -684,16 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/IHost.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="36" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/javax/swing/JButton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="56">
@@ -729,22 +747,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Listener.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bean/Moment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="26" />
-          <folding>
-            <element signature="e#333#334#0" expanded="true" />
-            <element signature="e#369#370#0" expanded="true" />
-            <element signature="e#403#404#0" expanded="true" />
-            <element signature="e#436#437#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Listener.java" />
     <entry file="file://$PROJECT_DIR$/src/APP.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -753,40 +756,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#154#155#0" expanded="true" />
             <element signature="e#203#204#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/SwichButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Util/RandomUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="101" selection-start-line="101" selection-end-line="101" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3877#3878#0" expanded="true" />
-            <element signature="e#3936#3937#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bean/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#360#361#0" expanded="true" />
-            <element signature="e#821#822#0" expanded="true" />
-            <element signature="e#852#853#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -801,92 +770,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bean/Memory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#338#339#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Listener/RouterAndHostMomentStrListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Presenter/IMainPresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/IRouteInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="46" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/impl/Router.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/impl/RouterInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1197#1198#0" expanded="true" />
-            <element signature="e#1224#1225#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/impl/Host.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="18" column="25" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#926#927#0" expanded="true" />
-            <element signature="e#951#952#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/impl/MainModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="69" column="35" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Presenter/MainPresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="32" column="89" selection-start-line="32" selection-start-column="62" selection-end-line="32" selection-end-column="89" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -900,44 +787,220 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/IMainView.java">
+    <entry file="file://$PROJECT_DIR$/src/Bean/Message.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/MainView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="222" lean-forward="true" selection-start-line="222" selection-end-line="222" />
+        <state relative-caret-position="480">
+          <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#setDiyBackGround#0;class#MainView#0" />
-            <element signature="method#enableOSXFullscreen#0;class#MainView#0" />
-            <element signature="method#requestOSXFullscreen#0;class#MainView#0" />
-            <element signature="e#10803#10804#0" expanded="true" />
-            <element signature="e#10844#10845#0" expanded="true" />
+            <element signature="e#324#325#0" expanded="true" />
+            <element signature="e#360#361#0" expanded="true" />
+            <element signature="e#850#851#0" expanded="true" />
+            <element signature="e#821#822#0" expanded="true" />
+            <element signature="e#852#853#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/MomentsView.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/text/NumberFormat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="121" column="94" selection-start-line="121" selection-start-column="94" selection-end-line="121" selection-end-column="94" />
+        <state relative-caret-position="167">
+          <caret line="289" column="24" selection-start-line="289" selection-start-column="24" selection-end-line="289" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/SwichButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="41" column="31" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Presenter/IMainPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="32" column="75" selection-start-line="32" selection-start-column="75" selection-end-line="32" selection-end-column="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/IMainView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="71" selection-start-line="12" selection-start-column="71" selection-end-line="12" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Presenter/MainPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="14" column="155" lean-forward="true" selection-start-line="14" selection-start-column="155" selection-end-line="14" selection-end-column="155" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Util/RandomUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="94" column="33" selection-start-line="94" selection-start-column="33" selection-end-line="94" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3877#3878#0" expanded="true" />
+            <element signature="e#3936#3937#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bean/Moment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="57" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
+          <folding>
+            <element signature="e#333#334#0" expanded="true" />
+            <element signature="e#369#370#0" expanded="true" />
+            <element signature="e#403#404#0" expanded="true" />
+            <element signature="e#436#437#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/View/MemoryCircleView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="81" column="33" selection-start-line="81" selection-start-column="33" selection-end-line="81" selection-end-column="33" />
+        <state relative-caret-position="169">
+          <caret line="88" column="27" selection-start-line="88" selection-start-column="27" selection-end-line="88" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/MainView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2901">
+          <caret line="284" column="45" selection-start-line="284" selection-start-column="45" selection-end-line="284" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initMemoryCircleViews#0;class#MainView#0" />
+            <element signature="method#setDiyBackGround#0;class#MainView#0" />
+            <element signature="method#enableOSXFullscreen#0;class#MainView#0" />
+            <element signature="method#requestOSXFullscreen#0;class#MainView#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/impl/MainModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="94" column="34" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/Model/impl/HostTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="82" column="30" selection-start-line="82" selection-start-column="30" selection-end-line="82" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/MomentsView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="113" column="57" selection-start-line="113" selection-start-column="55" selection-end-line="113" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/IHost.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bean/ReceiveAndSend.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/IRouteInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="60" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/impl/Router.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="118" column="123" selection-start-line="118" selection-start-column="123" selection-end-line="118" selection-end-column="123" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Configure/RouterAndHostConfigure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/impl/Host.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="75" column="47" lean-forward="true" selection-start-line="75" selection-start-column="47" selection-end-line="75" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#926#927#0" expanded="true" />
+            <element signature="e#951#952#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/impl/RouterInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="54" column="46" selection-start-line="54" selection-start-column="46" selection-end-line="54" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/Vector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-274">
+          <caret line="85" column="13" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bean/Memory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="626">
+          <caret line="58" column="16" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#385#386#0" expanded="true" />
+            <element signature="e#436#437#0" expanded="true" />
+            <element signature="e#474#475#0" expanded="true" />
+            <element signature="e#516#517#0" expanded="true" />
           </folding>
         </state>
       </provider>

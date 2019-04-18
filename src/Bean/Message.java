@@ -32,6 +32,10 @@ public class Message {
         this.originIp = originIp;
     }
 
+    public String getContent() {
+        return content;
+    }
+
     public String getOriginIp() {
         return originIp;
     }

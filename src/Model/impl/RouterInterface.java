@@ -28,11 +28,11 @@ public class RouterInterface implements IRouteInterface {
         return host;
     }
 
-    public RouterInterface(Host host, int port,  UpdateInputMessageMomentListener updateInputMessageMomentListener,int memorySize) {
+    public RouterInterface(Host host, int port, UpdateInputMessageMomentListener updateInputMessageMomentListener, int memorySize) {
         this.host = host;
         this.port = port;
         memory = new Memory(2);
-        this.updateInputMessageMomentListener=updateInputMessageMomentListener;
+        this.updateInputMessageMomentListener = updateInputMessageMomentListener;
 
     }
 
@@ -40,7 +40,7 @@ public class RouterInterface implements IRouteInterface {
         this.host = host;
         this.port = port;
         memory = new Memory(2);
-        this.updateInputMessageMomentListener=updateInputMessageMomentListener;
+        this.updateInputMessageMomentListener = updateInputMessageMomentListener;
 
     }
 
@@ -54,10 +54,18 @@ public class RouterInterface implements IRouteInterface {
 
         float percentage = memory.getMemoryPercentage();
         if (updatePercentageListener != null) {
-            updatePercentageListener.updatePercentage(host.getIp(), percentage);
+            updatePercentageListener.updatePercentage(host.getIp(), percentage, memory.getMemoryCurCount());
         }
-        updateInputMessageMomentListener.inputMessageMoment(message);
-        return memory.addContentToMemory(message);
+
+
+        if ( memory.addContentToMemory(message)){
+            updateInputMessageMomentListener.inputMessageMoment(message,true);
+            return true;
+        }else {
+            updateInputMessageMomentListener.inputMessageMoment(message,false);
+            return false;
+        }
+
     }
 
     @Override
@@ -66,7 +74,7 @@ public class RouterInterface implements IRouteInterface {
         if (percentage > 1) {
             percentage = 1;
         }
-        updatePercentageListener.updatePercentage(host.getIp(), percentage);
+        updatePercentageListener.updatePercentage(host.getIp(), percentage, memory.getMemoryCurCount());
         return host.inputMessage(message);
     }
 

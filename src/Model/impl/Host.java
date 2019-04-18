@@ -1,12 +1,12 @@
 package Model.impl;
 
 import Bean.Message;
+import Configure.RouterAndHostConfigure;
 import Listener.RouterAndHostMomentStrListener;
 import Model.IHost;
 import Util.PrintUtil;
 import Util.RandomUtil;
 
-import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.*;
 
@@ -16,7 +16,6 @@ import java.util.concurrent.*;
  */
 public class Host implements IHost {
     private String ip;
-    private int processId;
 
     private ArrayList<String> ips;
 
@@ -24,7 +23,8 @@ public class Host implements IHost {
 
     private RouterInterface routerInterface;
 
-    private int sendMessageCountPerOneSecond = 10;
+    private int processId;
+
 
     private ScheduledExecutorService scheduledExecutorService;
 
@@ -64,16 +64,22 @@ public class Host implements IHost {
     @Override
     public boolean outputMessage() {
 
-        ArrayList<Message> messageArrayList = buildMessages(this.sendMessageCountPerOneSecond);
-        for (Message message : messageArrayList) {
+        try {
+            ArrayList<Message> messageArrayList = buildMessages(RouterAndHostConfigure.messageCountSentPerSecondOfHost);
+            for (Message message : messageArrayList) {
 
-            if (routerInterface.inputMessage(message)) {
-                routerAndHostMomentStrListener.addMomentStrToHostQueue(ip, "发送报文到主机：" + message.getTargetAddress(), 1);
-                //发送成功
-            } else {
-                //发送失败，因为路由器存储器容量不够了
+                if (routerInterface.inputMessage(message)) {
+                    routerAndHostMomentStrListener.addMomentStrToHostQueue(ip, "发送报文到主机：" + message.getTargetAddress(), 1);
+                    //发送成功
+                } else {
+                    //发送失败，因为路由器存储器容量不够了
+                    routerAndHostMomentStrListener.addMomentStrToHostQueue(ip, "发送报文到主机：" + message.getTargetAddress() + "失败!", 2);
+                }
             }
+        } catch (Exception e) {
+            System.out.println("Exception-outputMessage:" + e.getLocalizedMessage());
         }
+
 
         return true;
     }
@@ -101,11 +107,10 @@ public class Host implements IHost {
     }
 
     @Override
-    public void startSendMessage(int messageCount) {
+    public void startSendMessage() {
 
-        this.sendMessageCountPerOneSecond = messageCount;
         scheduledExecutorService = new ScheduledThreadPoolExecutor(1);
-        scheduledExecutorService.scheduleWithFixedDelay(this::outputMessage, 0, 1, TimeUnit.SECONDS);
+        scheduledExecutorService.scheduleWithFixedDelay(this::outputMessage, 0, RouterAndHostConfigure.periodOfHostSendMessage, TimeUnit.SECONDS);
         PrintUtil.printLn("启动主机" + ip + "的发送信息线程");
     }
 

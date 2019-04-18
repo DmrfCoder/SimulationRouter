@@ -39,7 +39,6 @@ public class SwichButton extends JButton {
         addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("click");
                 if (curState == 0) {
                     curState = 1;
                     stateChangeListener.changeToRunning();

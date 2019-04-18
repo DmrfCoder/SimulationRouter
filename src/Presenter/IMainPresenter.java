@@ -30,6 +30,6 @@ public interface IMainPresenter {
 
 
     interface UpdatePercentageListener {
-        void updatePercentage(int index, float percentage);
+        void updatePercentage(int index, float percentage, int messageCount);
     }
 }

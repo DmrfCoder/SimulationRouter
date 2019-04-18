@@ -7,8 +7,10 @@ import Util.RandomUtil;
 import javax.swing.*;
 import java.awt.*;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.LinkedList;
+import java.util.Vector;
 
 /**
  * @author dmrfcoder
@@ -16,19 +18,20 @@ import java.util.LinkedList;
  */
 public class MomentsView extends JComponent implements IMomentsView {
 
-    private int momentsMaxCount = 17;
+    private int momentsMaxCount;
 
-    private LinkedList<Moment> moments;
-    private LinkedList<JLabel> jLabels;
+    private volatile Vector<Moment> moments;
 
     private int windowHeight;
     private int windowWidth;
 
     private int hostId;
     private String hostIp;
-    private String hostPort=null;
+    private String hostPort = null;
     private int type;
     private int textHeight = 20;
+
+    private volatile int curCount;
 
     public MomentsView(int hostId, String hostIp, int type, int momentsMaxCount) {
         this.hostId = hostId;
@@ -36,26 +39,26 @@ public class MomentsView extends JComponent implements IMomentsView {
         this.momentsMaxCount = momentsMaxCount;
         this.type = type;
 
-        windowHeight = momentsMaxCount * (350 / 16);
-        windowWidth = 300;
-        moments = new LinkedList<>();
-        jLabels = new LinkedList<>();
+        windowHeight = (momentsMaxCount + 2) * textHeight;
+        windowWidth = 400;
+        moments = new Vector<>();
+        curCount = 0;
         initView();
 
     }
 
-    public MomentsView(int hostId, String hostIp,String hostPort, int type) {
-        momentsMaxCount = 16;
+    public MomentsView(int hostId, String hostIp, String hostPort, int type) {
+
         this.hostId = hostId;
         this.hostIp = hostIp;
-        this.momentsMaxCount = momentsMaxCount;
+        this.momentsMaxCount = 20;
         this.type = type;
-        this.hostPort=hostPort;
+        this.hostPort = hostPort;
 
-        windowHeight = 350;
-        windowWidth = 300;
-        moments = new LinkedList<>();
-        jLabels = new LinkedList<>();
+        windowHeight = (momentsMaxCount + 1) * textHeight;
+        windowWidth = 400;
+        moments = new Vector<>();
+        curCount = 0;
         initView();
 
     }
@@ -77,11 +80,15 @@ public class MomentsView extends JComponent implements IMomentsView {
 
     @Override
     public void addMoment(Moment moment) {
-        if (moments.size() < momentsMaxCount) {
+        if (curCount < momentsMaxCount) {
             moments.add(moment);
+            curCount++;
         } else {
             moments.remove(0);
+            curCount--;
+
             moments.add(moment);
+            curCount++;
 
         }
         repaint();
@@ -95,14 +102,19 @@ public class MomentsView extends JComponent implements IMomentsView {
         g.drawRect(0, 0, windowWidth, windowHeight - 20);
 
 
-        for (int index = 0; index < moments.size(); index++) {
-            int itemY = textHeight * (index + 1);
+        for (int index = 0; index < curCount; index++) {
+            int itemY = textHeight * index;
+            if (itemY >= windowHeight - 20) {
+                break;
+            }
 
             try {
                 SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                 String time = df.format(new Date());
                 if (moments.get(index).getMomentType() == 0) {
                     g.setColor(ViewConfigure.defaultTextColor);
+                } else if (moments.get(index).getMomentType() == 1) {
+                    g.setColor(Color.white);
                 } else {
                     g.setColor(Color.red);
                 }
@@ -110,7 +122,7 @@ public class MomentsView extends JComponent implements IMomentsView {
 
                 g.drawString(time.substring(11) + ":" + moments.get(index).getMomentContent(), 0, itemY);
             } catch (Exception e) {
-                int a = 0;
+                System.out.println("Exception-MomentView-paint");
             }
 
         }
@@ -119,7 +131,7 @@ public class MomentsView extends JComponent implements IMomentsView {
         if (type == 0) {
             g.drawString("路由器：" + hostId, (windowWidth - 100) / 2, windowHeight - 5);
         } else {
-            g.drawString("主机：" + hostId + " ip:" + hostIp+" port:"+hostPort, (windowWidth - 250) / 2, windowHeight - 5);
+            g.drawString("主机：" + hostId + " ip:" + hostIp + " port:" + hostPort, (windowWidth - 250) / 2, windowHeight - 5);
         }
 
 

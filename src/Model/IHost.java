@@ -15,7 +15,7 @@ public interface IHost {
 
     ArrayList<Message> buildMessages(int messageCount);
 
-    void startSendMessage(int messageCount);
+    void startSendMessage();
 
     void stopSendMessage();
 

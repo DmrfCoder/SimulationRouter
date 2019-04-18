@@ -2,6 +2,7 @@ package View;
 
 import javax.swing.*;
 import java.awt.*;
+import java.text.DecimalFormat;
 
 /**
  * @author dmrfcoder
@@ -26,6 +27,10 @@ public class MemoryCircleView extends JComponent {
     private int interfaceId;
 
     private double curValue;
+    private int curMessageCount;
+
+
+    DecimalFormat decimalFormat = new DecimalFormat("0.00");
 
 
     public MemoryCircleView(int port, int interfaceId) {
@@ -34,12 +39,12 @@ public class MemoryCircleView extends JComponent {
         circleBackGroundColor = Color.MAGENTA;
 
 
-        windowHeight = 250;
+        windowHeight = 200;
         windowWidth = 200;
 
 
         smallestD = windowWidth / 4;
-        biggestD = windowWidth;
+        biggestD = windowWidth - 30;
 
         curD = smallestD;
 
@@ -74,24 +79,26 @@ public class MemoryCircleView extends JComponent {
     public void paint(Graphics g) {
         super.paint(g);
         g.setColor(circleBackGroundColor);
-        g.fillOval((windowWidth - curD) / 2, (windowHeight - curD) / 2, curD, curD);
-        g.setColor(new Color(113,213,250));
+        g.fillOval((windowWidth - curD) / 2, (windowHeight-curD)/2, curD, curD);
+        g.setColor(new Color(113, 213, 250));
 
         g.drawString("接口：" + interfaceId + "，端口：" + port, (windowWidth - 130) / 2, windowHeight - 5);
-
         g.setColor(Color.BLACK);
-        g.drawString(curValue + "%", (windowWidth - 30) / 2, 5+windowHeight  / 2);
+        g.drawString(String.valueOf(curMessageCount), (windowWidth - 20) / 2, windowHeight / 2 - 10);
+        g.setColor(Color.BLACK);
+        g.drawString(decimalFormat.format(curValue) + "%", (windowWidth - 30) / 2, 5 + windowHeight / 2);
 
-        g.setColor(new Color(113,213,250));
+        g.setColor(new Color(113, 213, 250));
         g.drawRect(0, 0, windowWidth, windowHeight);
 
     }
 
-    public void updatePercentage(double value) {
+    public void updatePercentage(double value, int messageCount) {
         //value 在0到100之间,0代表greenInt，100代表redInt
 
         if (value <= 100 && value > 0) {
             curValue = value;
+            curMessageCount = messageCount;
             int curR = (int) (2.55 * value);
             int curG = (int) (255 - 2.55 * value);
 

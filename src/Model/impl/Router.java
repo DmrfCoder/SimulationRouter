@@ -3,14 +3,13 @@ package Model.impl;
 import Bean.Memory;
 import Bean.Message;
 import Bean.RouteTable;
+import Configure.RouterAndHostConfigure;
 import Listener.RouterAndHostMomentStrListener;
 import Model.IRouteInterface;
 import Model.IRouter;
-import Util.PrintUtil;
 import Util.RandomUtil;
 
 import java.util.ArrayList;
-import java.util.Queue;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
@@ -71,17 +70,18 @@ public class Router implements IRouter, IRouteInterface.UpdateInputMessageMoment
 
     @Override
     public void readAndHandleMemory() {
-        for (RouterInterface routerInterface : routerInterfaceList) {
-            Memory memory = routerInterface.getMemory();
-            Queue<Message> messageQueue = memory.getMessageQueue();
-            while (!messageQueue.isEmpty()) {
-                Message message = messageQueue.peek();
-                if (sendMessageToHost(message)) {
-                    memory.removeMessageFromMemory(message);
-                    messageQueue.poll();
-                }
+
+
+        int interfaceIndex = RandomUtil.getInstance().randInt(0, 3);
+        RouterInterface curInterface = routerInterfaceList.get(interfaceIndex);
+        Memory memory = curInterface.getMemory();
+        Message message = memory.getMessage();
+        if (message != null) {
+            if (sendMessageToHost(message)) {
+                memory.removeMessageFromMemory(message);
             }
         }
+
     }
 
     @Override
@@ -90,7 +90,7 @@ public class Router implements IRouter, IRouteInterface.UpdateInputMessageMoment
         String targetIp = message.getTargetAddress();
         for (RouterInterface routerInterface : routerInterfaceList) {
             if (routerInterface.getHost().getIp().equals(targetIp)) {
-                routerAndHostMomentStrListener.addMomentStrToRouterQueue(routerId, "发送来自主机：" + message.getOriginIp() + " 的报文到主机： " + message.getTargetAddress(), 0);
+                routerAndHostMomentStrListener.addMomentStrToRouterQueue(routerId, "发送来自主机：" + message.getOriginIp() + " 的报文到主机： " + message.getTargetAddress(), 1);
                 routerInterface.outputMessage(message);
                 return true;
             }
@@ -101,7 +101,7 @@ public class Router implements IRouter, IRouteInterface.UpdateInputMessageMoment
     @Override
     public void startReadMemoryTask() {
         scheduledExecutorService = new ScheduledThreadPoolExecutor(1);
-        scheduledExecutorService.scheduleWithFixedDelay(this::readAndHandleMemory, 0, 1, TimeUnit.SECONDS);
+        scheduledExecutorService.scheduleWithFixedDelay(this::readAndHandleMemory, 0, RouterAndHostConfigure.periodOfRouterReadMemory, TimeUnit.SECONDS);
     }
 
     @Override
@@ -111,8 +111,14 @@ public class Router implements IRouter, IRouteInterface.UpdateInputMessageMoment
 
 
     @Override
-    public void inputMessageMoment(Message message) {
-        routerAndHostMomentStrListener.addMomentStrToRouterQueue(routerId, "接收到来自主机：" + message.getOriginIp() + "的报文", 1);
+    public void inputMessageMoment(Message message, boolean flag) {
+        if (flag) {
+            routerAndHostMomentStrListener.addMomentStrToRouterQueue(routerId, "接收到来自主机：" + message.getOriginIp() + "的报文", 0);
+
+        } else {
+            routerAndHostMomentStrListener.addMomentStrToRouterQueue(routerId, "接收到来自主机：" + message.getOriginIp() + "的报文失败！", 2);
+
+        }
 
     }
 }

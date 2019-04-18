@@ -1,8 +1,8 @@
 package Bean;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Vector;
 
 /**
  * @author dmrfcoder
@@ -10,19 +10,37 @@ import java.util.Queue;
  */
 public class Memory {
     private int memorySize;
-    private Queue<Message> messageQueue;
+    private Vector<Message> messageVector;
+    private volatile float curSize;
+
 
     public float getMemoryPercentage() {
-        return (messageQueue.size() + 1) / memorySize;
+        return (curSize / memorySize) * 100;
     }
 
-    public Queue<Message> getMessageQueue() {
-        return messageQueue;
+    public int getMemoryCurCount() {
+        return messageVector.size();
+    }
+
+
+    public Message getMessage() {
+        if (messageVector.size() == 0) {
+            return null;
+        } else {
+            Message message = messageVector.lastElement();
+            messageVector.remove(message);
+            return message;
+        }
+    }
+
+    public Vector<Message> getMessageVector() {
+        return messageVector;
     }
 
     public boolean removeMessageFromMemory(Message message) {
-        if (messageQueue.peek() != null && messageQueue.peek().equals(message)) {
-            messageQueue.poll();
+        if (messageVector.lastElement() != null && messageVector.lastElement().equals(message)) {
+            messageVector.remove(messageVector.lastElement());
+            curSize -= message.getContent().length();
             return true;
         }
         return false;
@@ -32,13 +50,15 @@ public class Memory {
      * @param memorySize :默认传入的单位为M，需要将其转化为字节。
      */
     public Memory(int memorySize) {
-        this.memorySize = memorySize;
-        this.messageQueue = new LinkedList<>();
+        this.memorySize = memorySize * 1024 * 1024;
+        this.messageVector = new Vector<>();
+        this.curSize = 0;
     }
 
     public boolean addContentToMemory(Message message) {
-        if (messageQueue.size() < memorySize) {
-            messageQueue.offer(message);
+        if (curSize < memorySize) {
+            messageVector.add(message);
+            curSize += message.getContent().length();
             return true;
         } else {
             return false;

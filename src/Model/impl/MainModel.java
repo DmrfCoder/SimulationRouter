@@ -92,7 +92,7 @@ public class MainModel implements IMainModel, RouterAndHostMomentStrListener, IR
     @Override
     public void startAll(StartAndStopListener startAndStopListener) {
         for (Host host : hosts) {
-            host.startSendMessage(10);
+            host.startSendMessage();
         }
 
         for (Router router : routers) {
@@ -134,11 +134,11 @@ public class MainModel implements IMainModel, RouterAndHostMomentStrListener, IR
     }
 
     @Override
-    public void updatePercentage(String hostIp, float percentage) {
+    public void updatePercentage(String hostIp, float percentage, int messageCount) {
 
         for (int index = 0; index < hosts.length; index++) {
             if (hosts[index].getIp().equals(hostIp)) {
-                updatePercentageListener.updatePercentage(index, percentage);
+                updatePercentageListener.updatePercentage(index, percentage, messageCount);
                 break;
             }
         }

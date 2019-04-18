@@ -15,11 +15,11 @@ public interface IRouteInterface {
     void setUpdatePercentageListener(UpdatePercentageListener updatePercentageListener);
 
     interface UpdatePercentageListener {
-        void updatePercentage(String hostIp,float percentage);
+        void updatePercentage(String hostIp,float percentage, int messageCount);
     }
 
     interface UpdateInputMessageMomentListener{
-        void inputMessageMoment(Message message);
+        void inputMessageMoment(Message message,boolean flag);
     }
 
 }

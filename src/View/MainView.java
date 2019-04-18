@@ -7,7 +7,6 @@ import Presenter.IMainPresenter;
 import Presenter.MainPresenter;
 
 import javax.swing.*;
-import javax.swing.text.View;
 import java.awt.*;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -20,7 +19,8 @@ import java.util.ArrayList;
 public class MainView extends JFrame implements IMainView, SwichButton.StateChangeListener, IMainModel.InitRoutersAndHostsListener, IMainModel.AddMomentToRouterAndHostListener {
 
     private JLabel memoryViewsTitleLable;
-    private JLabel momentsViewsTitleLable;
+    private JLabel hostsMomentsViewsTitleLable;
+    private JLabel routerMomentsViewsTitleLable;
 
 
     private ArrayList<MemoryCircleView> memoryCircleViews;
@@ -35,19 +35,8 @@ public class MainView extends JFrame implements IMainView, SwichButton.StateChan
     private int screenWidth;
 
 
-    int memoryCircleViewWidth;
-    int memoryCircleViewHeight;
-
-    int memoryCirclesStartX = -130;
-    int memoryCirclesStartY = 50;
-
-    int memoryCirclesDistance = 50;
-
     private IMainPresenter iMainPresenter;
 
-
-    private ArrayList<String> hostsIp;
-    private ArrayList<Integer> routersId;
 
     private SwichButton startAndStopButton;
 
@@ -61,10 +50,11 @@ public class MainView extends JFrame implements IMainView, SwichButton.StateChan
             e.printStackTrace();
         }
         initView();
-        setVisible(true);
+
         iMainPresenter = new MainPresenter(this, this);
 
         iMainPresenter.initRoutersAndHosts(1, 4, this);
+        setVisible(true);
     }
 
     @Override
@@ -94,14 +84,12 @@ public class MainView extends JFrame implements IMainView, SwichButton.StateChan
 
 
         getContentPane().setLayout(null);
-        // setBackground(new Color(5, 39, 179));
-        //getContentPane().setBackground(new Color(5, 39, 179));
         setDiyBackGround();
         JPanel jPanel = (JPanel) getContentPane();
         jPanel.setOpaque(false);
 
         startAndStopButton = new SwichButton(40);
-        startAndStopButton.setBounds(screenWidth - 100, 10, 40, 40);
+        startAndStopButton.setBounds(screenWidth - 100, 5, 40, 40);
         startAndStopButton.setStateChangeListener(this);
         add(startAndStopButton);
 
@@ -112,37 +100,46 @@ public class MainView extends JFrame implements IMainView, SwichButton.StateChan
     public void initMemoryCircleViews(ArrayList<Integer> ports) {
 
         memoryCircleViews = new ArrayList<MemoryCircleView>();
+        int memoryCircleViewWidth;
+        int memoryCircleViewHeight;
+        int memoryCirclesStartX;
+        int memoryCirclesStartY;
+        int memoryCirclesDistance = 5;
+
+
+        memoryCirclesStartX = memoryCirclesDistance;
+        memoryCirclesStartY = startAndStopButton.getY() + startAndStopButton.getHeight() + memoryCirclesDistance;
 
         memoryViewsTitleLable = new JLabel("路由器各个接口中存储器的占用情况");
         memoryViewsTitleLable.setForeground(ViewConfigure.defaultTextColor);
-        memoryViewsTitleLable.setBounds(((screenWidth / 2) - 250) / 2, 10, 250, 20);
-        add(memoryViewsTitleLable);
 
 
         MemoryCircleView memoryCircleView1 = new MemoryCircleView(ports.get(0), 1);
         memoryCircleViewWidth = memoryCircleView1.getWindowWidth();
         memoryCircleViewHeight = memoryCircleView1.getWindowHeight();
 
-        memoryCirclesStartY = (screenHeight - memoryCircleViewHeight * 2 - memoryCirclesDistance - memoryViewsTitleLable.getY() - memoryViewsTitleLable.getHeight()) / 2;
+        memoryViewsTitleLable.setBounds(5, 10, 250, 20);
+        add(memoryViewsTitleLable);
 
-        memoryCircleView1.setBounds(memoryCirclesStartX + (screenWidth / 2 - memoryCircleViewWidth * 2 - memoryCirclesDistance) / 2, memoryCirclesStartY, memoryCircleViewWidth, memoryCircleViewHeight);
+
+        memoryCircleView1.setBounds(memoryCirclesStartX, memoryCirclesStartY, memoryCircleViewWidth, memoryCircleViewHeight);
         add(memoryCircleView1);
         memoryCircleViews.add(memoryCircleView1);
 
 
         MemoryCircleView memoryCircleView2 = new MemoryCircleView(ports.get(1), 2);
-        memoryCircleView2.setBounds(memoryCirclesStartX + memoryCircleViewWidth + memoryCirclesDistance + (screenWidth / 2 - memoryCircleViewWidth * 2 - memoryCirclesDistance) / 2, memoryCirclesStartY, memoryCircleViewWidth, memoryCircleViewHeight);
+        memoryCircleView2.setBounds(memoryCirclesStartX, memoryCirclesStartY + memoryCircleViewHeight + memoryCirclesDistance, memoryCircleViewWidth, memoryCircleViewHeight);
         add(memoryCircleView2);
         memoryCircleViews.add(memoryCircleView2);
 
         MemoryCircleView memoryCircleView3 = new MemoryCircleView(ports.get(2), 3);
-        memoryCircleView3.setBounds(memoryCirclesStartX + (screenWidth / 2 - memoryCircleViewWidth * 2 - memoryCirclesDistance) / 2, memoryCircleViewHeight + memoryCirclesDistance + memoryCirclesStartY, memoryCircleViewWidth, memoryCircleViewHeight);
+        memoryCircleView3.setBounds(memoryCirclesStartX, memoryCirclesStartY + (memoryCircleViewHeight + memoryCirclesDistance) * 2, memoryCircleViewWidth, memoryCircleViewHeight);
         add(memoryCircleView3);
         memoryCircleViews.add(memoryCircleView3);
 
 
         MemoryCircleView memoryCircleView4 = new MemoryCircleView(ports.get(3), 4);
-        memoryCircleView4.setBounds(memoryCirclesStartX + memoryCircleViewWidth + memoryCirclesDistance + (screenWidth / 2 - memoryCircleViewWidth * 2 - memoryCirclesDistance) / 2, memoryCircleViewHeight + memoryCirclesDistance + memoryCirclesStartY, memoryCircleViewWidth, memoryCircleViewHeight);
+        memoryCircleView4.setBounds(memoryCirclesStartX, memoryCirclesStartY + (memoryCircleViewHeight + memoryCirclesDistance) * 3, memoryCircleViewWidth, memoryCircleViewHeight);
         add(memoryCircleView4);
         memoryCircleViews.add(memoryCircleView4);
 
@@ -152,51 +149,63 @@ public class MainView extends JFrame implements IMainView, SwichButton.StateChan
     @Override
     public void initMomentsViews(ArrayList<String> hostsIp) {
 
-        int linX = memoryCirclesStartX + (screenWidth / 2 - memoryCircleViewWidth * 2 - memoryCirclesDistance) / 2 + memoryCirclesDistance + memoryCircleViewWidth * 2 + 8;
 
-        momentsViewsTitleLable = new JLabel("主机和路由器实时动态");
-        momentsViewsTitleLable.setForeground(ViewConfigure.defaultTextColor);
-        momentsViewsTitleLable.setBounds(linX + (screenWidth - linX) / 2, 10, 250, 20);
-        add(momentsViewsTitleLable);
+        hostsMomentsViewsTitleLable = new JLabel("主机实时动态");
+        hostsMomentsViewsTitleLable.setForeground(ViewConfigure.defaultTextColor);
+
 
         int momentsViewWidth;
         int momentsViewHeight;
 
-        int momentStartX = screenWidth / 2 + 50 - 20;
-        int momentStartY;
-
-
-        int momentsViewsDistance = 50;
 
         momentsViews = new ArrayList<MomentsView>();
 
         MomentsView momentsView1 = new MomentsView(1, hostsIp.get(0), hostsIp.get(1), 1);
         momentsViewWidth = momentsView1.getWindowWidth();
         momentsViewHeight = momentsView1.getWindowHeight();
+        int momentsViewsDistance = 5;
+        int momentStartX = screenWidth - momentsViewsDistance - momentsViewWidth - momentsViewsDistance - momentsViewWidth - momentsViewsDistance - momentsViewWidth;
+        int momentStartY;
+        momentStartY = startAndStopButton.getY() + startAndStopButton.getHeight() + momentsViewsDistance;
 
-        momentStartY = (screenHeight - momentsViewHeight * 2 - momentsViewsDistance - momentsViewsTitleLable.getY() - momentsViewsTitleLable.getHeight()) / 2;
 
-        momentsView1.setBounds(momentStartX + (screenWidth / 2 - momentsViewWidth * 2 - momentsViewsDistance) / 2, momentStartY, momentsViewWidth, momentsViewHeight);
+        routerMomentsViewsTitleLable = new JLabel("路由器实时动态");
+        routerMomentsViewsTitleLable.setForeground(ViewConfigure.defaultTextColor);
+
+
+        momentsViewRouter = new MomentsView(1, "路由器", 0, 40);
+
+        routerMomentsViewsTitleLable.setBounds(momentStartX + momentsViewWidth / 2 - 78 / 2, 10, 250, 20);
+        add(routerMomentsViewsTitleLable);
+
+        momentsViewRouter.setBounds(momentStartX, momentStartY, momentsViewWidth, momentsViewRouter.getWindowHeight());
+        add(momentsViewRouter);
+
+
+        hostsMomentsViewsTitleLable.setBounds(momentStartX + momentsViewWidth + momentsViewsDistance + (momentsViewWidth * 2 + momentsViewsDistance) / 2 - 78 / 2, 10, 250, 20);
+        add(hostsMomentsViewsTitleLable);
+
+
+        //momentStartY = (screenHeight - momentsViewHeight * 2 - momentsViewsDistance - startAndStopButton.getY() - startAndStopButton.getHeight()) / 2;
+
+
+        momentsView1.setBounds(momentStartX + momentsViewWidth + momentsViewsDistance, momentStartY, momentsViewWidth, momentsViewHeight);
         add(momentsView1);
         momentsViews.add(momentsView1);
 
         MomentsView momentsView2 = new MomentsView(2, hostsIp.get(2), hostsIp.get(3), 1);
-        momentsView2.setBounds(momentStartX + momentsViewWidth + momentsViewsDistance + (screenWidth / 2 - momentsViewWidth * 2 - momentsViewsDistance) / 2, momentStartY, momentsViewWidth, momentsViewHeight);
+        momentsView2.setBounds(momentStartX + momentsViewWidth + momentsViewsDistance + momentsViewWidth + momentsViewsDistance, momentStartY, momentsViewWidth, momentsViewHeight);
         add(momentsView2);
         momentsViews.add(momentsView2);
 
         MomentsView momentsView3 = new MomentsView(3, hostsIp.get(4), hostsIp.get(5), 1);
-        momentsView3.setBounds(momentStartX + (screenWidth / 2 - momentsViewWidth * 2 - momentsViewsDistance) / 2, momentsViewHeight + momentsViewsDistance + momentStartY, momentsViewWidth, momentsViewHeight);
+        momentsView3.setBounds(momentStartX + momentsViewWidth + momentsViewsDistance, momentsViewHeight + momentsViewsDistance + momentStartY, momentsViewWidth, momentsViewHeight);
         add(momentsView3);
         momentsViews.add(momentsView3);
         MomentsView momentsView4 = new MomentsView(4, hostsIp.get(6), hostsIp.get(7), 1);
-        momentsView4.setBounds(momentStartX + momentsViewWidth + momentsViewsDistance + (screenWidth / 2 - momentsViewWidth * 2 - momentsViewsDistance) / 2, momentsViewHeight + momentsViewsDistance + momentStartY, momentsViewWidth, momentsViewHeight);
+        momentsView4.setBounds(momentStartX + momentsViewWidth + momentsViewsDistance + momentsViewWidth + momentsViewsDistance, momentsViewHeight + momentsViewsDistance + momentStartY, momentsViewWidth, momentsViewHeight);
         add(momentsView4);
         momentsViews.add(momentsView4);
-
-        momentsViewRouter = new MomentsView(1, "路由器", 0, 40);
-        momentsViewRouter.setBounds((screenWidth - momentsViewWidth) / 2 - 100, (screenHeight - momentsViewRouter.getWindowHeight()) / 2, momentsViewWidth, momentsViewRouter.getWindowHeight());
-        add(momentsViewRouter);
 
 
 //        new Thread(() -> {
@@ -218,7 +227,6 @@ public class MainView extends JFrame implements IMainView, SwichButton.StateChan
         this.getLayeredPane().add(background, new Integer(Integer.MIN_VALUE));
         background.setBounds(0, 0, img.getIconWidth(), img.getIconHeight());
     }
-
 
 
     public static void enableOSXFullscreen(Window window) {
@@ -263,7 +271,6 @@ public class MainView extends JFrame implements IMainView, SwichButton.StateChan
     public void initRouterSuccess(ArrayList<Integer> ports) {
         initMemoryCircleViews(ports);
 
-        this.routersId = ports;
     }
 
     @Override
@@ -273,7 +280,7 @@ public class MainView extends JFrame implements IMainView, SwichButton.StateChan
 
     @Override
     public void addToRouter(int index, String content, int type) {
-        System.out.println("addToRouter:" + content);
+        // System.out.println("addToRouter:" + content);
         if (index == 0) {
             momentsViewRouter.addMoment(new Moment(content, type));
         }
@@ -282,17 +289,17 @@ public class MainView extends JFrame implements IMainView, SwichButton.StateChan
     @Override
     public void addToHost(int index, String content, int type) {
 
-        System.out.println("addToHost:" + index);
+        //System.out.println("addToHost:" + index);
         if (index >= 0 && index < momentsViews.size()) {
             momentsViews.get(index).addMoment(new Moment(content, type));
         }
     }
 
     @Override
-    public void updatePercentage(int index, float percentage) {
-        System.out.println("updatePercentage:" + percentage);
+    public void updatePercentage(int index, float percentage, int messageCount) {
+        //System.out.println("updatePercentage:" + percentage);
         if (index >= 0 && index < memoryCircleViews.size()) {
-            memoryCircleViews.get(index).updatePercentage(percentage);
+            memoryCircleViews.get(index).updatePercentage(percentage, messageCount);
         }
     }
 }

@@ -80,7 +80,7 @@ public class HostTest {
      */
     @Test
     public void testStartSendMessage() throws Exception {
-        host.startSendMessage(10);
+        host.startSendMessage();
     }
 
     /**
