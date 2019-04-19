@@ -6,12 +6,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 /**
  * @author dmrfcoder
  * @date 2019-04-17
  */
-public class SwichButton extends JButton {
+public class SwichButton extends JLabel {
 
     //0代表开始/绿色(停止中)，1代表结束/红色（运行中）
     private int curState;
@@ -33,14 +35,16 @@ public class SwichButton extends JButton {
     public SwichButton(int D) {
         curState = 0;
         this.D = D;
+
         initListener();
 
     }
 
+
     private void initListener() {
-        addActionListener(new ActionListener() {
+        addMouseListener(new MouseListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void mouseClicked(MouseEvent e) {
                 if (curState == 0) {
                     curState = 1;
                     stateChangeListener.changeToRunning();
@@ -50,19 +54,40 @@ public class SwichButton extends JButton {
                 }
                 repaint();
             }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+
+            }
         });
+
     }
 
     @Override
     public void paint(Graphics g) {
         super.paint(g);
-
         if (curState == 0) {
             g.setColor(ViewConfigure.defaultTextColor);
         } else {
             g.setColor(Color.red);
         }
         g.fillOval((getWidth() - D) / 2, (getHeight() - D) / 2, D, D);
+
 
         String text = "";
         g.setColor(Color.BLACK);

@@ -94,6 +94,8 @@ public class MainView extends JFrame implements IMainView, SwichButton.StateChan
         add(startAndStopButton);
 
 
+
+
     }
 
     @Override
@@ -156,7 +158,7 @@ public class MainView extends JFrame implements IMainView, SwichButton.StateChan
 
         int momentsViewWidth;
         int momentsViewHeight;
-        int routerMomentsViewWidth=600;
+        int routerMomentsViewWidth = 600;
 
 
         momentsViews = new ArrayList<MomentsView>();
@@ -175,7 +177,7 @@ public class MainView extends JFrame implements IMainView, SwichButton.StateChan
         routerMomentsViewsTitleLable.setForeground(ViewConfigure.defaultTextColor);
 
 
-        momentsViewRouter = new MomentsView(1, "路由器", 0, 40,routerMomentsViewWidth);
+        momentsViewRouter = new MomentsView(1, "路由器", 0, 40, routerMomentsViewWidth);
 
         routerMomentsViewsTitleLable.setBounds(momentStartX + routerMomentsViewWidth / 2 - 78 / 2, 10, 250, 20);
         add(routerMomentsViewsTitleLable);
