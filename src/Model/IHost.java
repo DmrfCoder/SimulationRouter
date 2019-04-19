@@ -11,6 +11,8 @@ import java.util.ArrayList;
 public interface IHost {
     boolean outputMessage();
 
+    boolean outputMessageProxy();
+
     boolean inputMessage(Message message);
 
     ArrayList<Message> buildMessages(int messageCount);

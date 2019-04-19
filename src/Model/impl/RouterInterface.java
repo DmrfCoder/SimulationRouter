@@ -2,6 +2,7 @@ package Model.impl;
 
 import Bean.Memory;
 import Bean.Message;
+import Configure.RouterAndHostConfigure;
 import Model.IRouteInterface;
 import com.sun.istack.internal.NotNull;
 
@@ -31,7 +32,7 @@ public class RouterInterface implements IRouteInterface {
     public RouterInterface(Host host, int port, UpdateInputMessageMomentListener updateInputMessageMomentListener, int memorySize) {
         this.host = host;
         this.port = port;
-        memory = new Memory(2);
+        memory = new Memory(memorySize);
         this.updateInputMessageMomentListener = updateInputMessageMomentListener;
 
     }
@@ -39,7 +40,7 @@ public class RouterInterface implements IRouteInterface {
     public RouterInterface(Host host, int port, UpdateInputMessageMomentListener updateInputMessageMomentListener) {
         this.host = host;
         this.port = port;
-        memory = new Memory(2);
+        memory = new Memory(RouterAndHostConfigure.routerInterfaceMemorySize);
         this.updateInputMessageMomentListener = updateInputMessageMomentListener;
 
     }
@@ -52,17 +53,17 @@ public class RouterInterface implements IRouteInterface {
     @Override
     public boolean inputMessage(Message message) {
 
-        float percentage = memory.getMemoryPercentage();
+        double percentage = memory.getMemoryPercentage();
         if (updatePercentageListener != null) {
-            updatePercentageListener.updatePercentage(host.getIp(), percentage, memory.getMemoryCurCount());
+            updatePercentageListener.updatePercentage(host.getIp(),  percentage, memory.getMemoryCurCount());
         }
 
 
-        if ( memory.addContentToMemory(message)){
-            updateInputMessageMomentListener.inputMessageMoment(message,true);
+        if (memory.addContentToMemory(message)) {
+            updateInputMessageMomentListener.inputMessageMoment(message, true);
             return true;
-        }else {
-            updateInputMessageMomentListener.inputMessageMoment(message,false);
+        } else {
+            updateInputMessageMomentListener.inputMessageMoment(message, false);
             return false;
         }
 
@@ -70,7 +71,7 @@ public class RouterInterface implements IRouteInterface {
 
     @Override
     public boolean outputMessage(Message message) {
-        float percentage = memory.getMemoryPercentage();
+        double percentage = memory.getMemoryPercentage();
         if (percentage > 1) {
             percentage = 1;
         }

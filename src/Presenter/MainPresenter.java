@@ -107,7 +107,7 @@ public class MainPresenter implements IMainPresenter, IMainModel.StartAndStopLis
     }
 
     @Override
-    public void updatePercentage(int index, float percentage, int messageCount) {
+    public void updatePercentage(int index, double percentage, int messageCount) {
         iMainView.updatePercentage(index, percentage,messageCount);
     }
 }

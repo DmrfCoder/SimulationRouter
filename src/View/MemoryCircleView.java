@@ -1,5 +1,7 @@
 package View;
 
+import Configure.ViewConfigure;
+
 import javax.swing.*;
 import java.awt.*;
 import java.text.DecimalFormat;
@@ -78,8 +80,13 @@ public class MemoryCircleView extends JComponent {
     @Override
     public void paint(Graphics g) {
         super.paint(g);
-        g.setColor(circleBackGroundColor);
+        g.setColor(ViewConfigure.defaultTextColor);
         g.fillOval((windowWidth - curD) / 2, (windowHeight-curD)/2, curD, curD);
+
+        g.setColor(ViewConfigure.defaultTextColor);
+        g.drawOval((windowWidth - biggestD) / 2, (windowHeight-biggestD)/2, biggestD, biggestD);
+
+
         g.setColor(new Color(113, 213, 250));
 
         g.drawString("接口：" + interfaceId + "，端口：" + port, (windowWidth - 130) / 2, windowHeight - 5);

@@ -134,7 +134,7 @@ public class MainModel implements IMainModel, RouterAndHostMomentStrListener, IR
     }
 
     @Override
-    public void updatePercentage(String hostIp, float percentage, int messageCount) {
+    public void updatePercentage(String hostIp, double percentage, int messageCount) {
 
         for (int index = 0; index < hosts.length; index++) {
             if (hosts[index].getIp().equals(hostIp)) {

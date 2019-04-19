@@ -1,5 +1,7 @@
 package View;
 
+import Configure.ViewConfigure;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -56,7 +58,7 @@ public class SwichButton extends JButton {
         super.paint(g);
 
         if (curState == 0) {
-            g.setColor(Color.green);
+            g.setColor(ViewConfigure.defaultTextColor);
         } else {
             g.setColor(Color.red);
         }

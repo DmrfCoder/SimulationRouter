@@ -15,6 +15,8 @@ public interface IRouter {
 
     void readAndHandleMemory();
 
+    void readAndHandleMemoryProxt();
+
     boolean sendMessageToHost(Message message);
 
     void startReadMemoryTask();

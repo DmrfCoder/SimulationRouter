@@ -64,6 +64,7 @@ public class Host implements IHost {
     @Override
     public boolean outputMessage() {
 
+
         try {
             ArrayList<Message> messageArrayList = buildMessages(RouterAndHostConfigure.messageCountSentPerSecondOfHost);
             for (Message message : messageArrayList) {
@@ -83,6 +84,19 @@ public class Host implements IHost {
 
         return true;
     }
+
+    @Override
+    public boolean outputMessageProxy() {
+        boolean res = false;
+        try {
+            res = outputMessage();
+        } catch (Exception e) {
+            PrintUtil.printLn("Exception-outputMessageProxy:" + e.getLocalizedMessage());
+        }
+
+        return res;
+    }
+
 
     @Override
     public boolean inputMessage(Message message) {
@@ -110,7 +124,7 @@ public class Host implements IHost {
     public void startSendMessage() {
 
         scheduledExecutorService = new ScheduledThreadPoolExecutor(1);
-        scheduledExecutorService.scheduleWithFixedDelay(this::outputMessage, 0, RouterAndHostConfigure.periodOfHostSendMessage, TimeUnit.SECONDS);
+        scheduledExecutorService.scheduleWithFixedDelay(this::outputMessageProxy, 0, RouterAndHostConfigure.periodOfHostSendMessage, TimeUnit.MICROSECONDS);
         PrintUtil.printLn("启动主机" + ip + "的发送信息线程");
     }
 

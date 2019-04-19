@@ -1,6 +1,7 @@
 package Util;
 
 import Bean.Moment;
+import Configure.RouterAndHostConfigure;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -99,7 +100,7 @@ public class RandomUtil implements IRandomUtil {
 
     @Override
     public String getRandomMessageContent() {
-        int length = randInt(0, 1024);
+        int length = randInt(RouterAndHostConfigure.minMessageLength, RouterAndHostConfigure.minMessageLength + 100);
         String str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         Random random = new Random();
         StringBuffer sb = new StringBuffer();

@@ -15,7 +15,7 @@ public interface IRouteInterface {
     void setUpdatePercentageListener(UpdatePercentageListener updatePercentageListener);
 
     interface UpdatePercentageListener {
-        void updatePercentage(String hostIp,float percentage, int messageCount);
+        void updatePercentage(String hostIp,double percentage, int messageCount);
     }
 
     interface UpdateInputMessageMomentListener{

@@ -10,7 +10,7 @@ public interface IMainView {
     void initView();
     void initMemoryCircleViews(ArrayList<Integer> ports);
     void initMomentsViews(ArrayList<String> hostsIp);
-    void updatePercentage(int index, float percentage, int messageCount);
+    void updatePercentage(int index, double percentage, int messageCount);
 
 
 

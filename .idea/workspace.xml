@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ebbf6414-77b7-440f-811b-8ee2477f85c6" name="Default Changelist" comment="" />
+    <list default="true" id="ebbf6414-77b7-440f-811b-8ee2477f85c6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bean/Memory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bean/Memory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Configure/RouterAndHostConfigure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Configure/RouterAndHostConfigure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/IHost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/IHost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/IRouteInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/IRouteInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/IRouter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/IRouter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/impl/Host.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/impl/Host.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/impl/MainModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/impl/MainModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/impl/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/impl/Router.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/impl/RouterInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/impl/RouterInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Presenter/IMainPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Presenter/IMainPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Presenter/MainPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Presenter/MainPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Util/RandomUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/RandomUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/IMainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/IMainView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/MainView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/MemoryCircleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/MemoryCircleView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/MomentsView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/MomentsView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/SwichButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/SwichButton.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,46 +33,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Model/impl/Host.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="111" column="66" selection-start-line="111" selection-start-column="39" selection-end-line="111" selection-end-column="66" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="uml://JAVA/Model.impl.Host">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>JAVA</ID>
-              <OriginalElement>Model.impl.Host</OriginalElement>
-              <nodes>
-                <node x="119.5" y="0.0">Model.IHost</node>
-                <node x="0.0" y="186.0">Model.impl.Host</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="Model.impl.Host" target="Model.IHost">
-                  <point x="0.0" y="-212.0" />
-                  <point x="0.0" y="68.0" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="0.9142857142857143" x="-91.609375" y="242.5" />
-              <SelectedNodes>
-                <node>Model.impl.Host</node>
-              </SelectedNodes>
-              <Categories>
-                <Category>Fields</Category>
-                <Category>Constructors</Category>
-                <Category>Methods</Category>
-              </Categories>
-              <SCOPE>All</SCOPE>
-              <VISIBILITY>private</VISIBILITY>
+        <entry file="file://$PROJECT_DIR$/src/Bean/Moment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+              <folding>
+                <element signature="e#333#334#0" expanded="true" />
+                <element signature="e#369#370#0" expanded="true" />
+                <element signature="e#403#404#0" expanded="true" />
+                <element signature="e#436#437#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -61,122 +51,93 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/impl/Router.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="849">
-              <caret line="118" column="123" selection-start-line="118" selection-start-column="123" selection-end-line="118" selection-end-column="123" />
+            <state relative-caret-position="102">
+              <caret line="80" column="45" selection-start-line="80" selection-start-column="45" selection-end-line="80" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#3959#3960#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="uml://JAVA/Model.impl.Router">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>JAVA</ID>
-              <OriginalElement>Model.impl.Router</OriginalElement>
-              <nodes>
-                <node x="67.5" y="186.0">Model.impl.Router</node>
-                <node x="353.0" y="0.0">Model.IRouter</node>
-                <node x="0.0" y="44.0">Model.IRouteInterface.UpdateInputMessageMomentListener</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="Model.impl.Router" target="Model.IRouteInterface.UpdateInputMessageMomentListener">
-                  <point x="-132.75" y="-168.0" />
-                  <point x="200.25" y="161.0" />
-                  <point x="166.5" y="161.0" />
-                  <point x="0.0" y="24.0" />
-                </edge>
-                <edge source="Model.impl.Router" target="Model.IRouter">
-                  <point x="132.75" y="-168.0" />
-                  <point x="465.75" y="161.0" />
-                  <point x="499.5" y="161.0" />
-                  <point x="0.0" y="68.0" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="1.0" x="-3.5" y="126.5" />
-              <SelectedNodes />
-              <Categories>
-                <Category>Fields</Category>
-                <Category>Constructors</Category>
-                <Category>Methods</Category>
-              </Categories>
-              <SCOPE>All</SCOPE>
-              <VISIBILITY>private</VISIBILITY>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/IRouter.java">
+        <entry file="file://$PROJECT_DIR$/src/Configure/RouterAndHostConfigure.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="240">
+              <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/IMainModel.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/View/MainView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="14" column="47" lean-forward="true" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+            <state relative-caret-position="305">
+              <caret line="179" column="84" selection-start-line="179" selection-start-column="84" selection-end-line="179" selection-end-column="84" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#initMemoryCircleViews#0;class#MainView#0" />
+                <element signature="method#setDiyBackGround#0;class#MainView#0" />
+                <element signature="method#enableOSXFullscreen#0;class#MainView#0" />
+                <element signature="method#requestOSXFullscreen#0;class#MainView#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="uml://JAVA/Model.IMainModel">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>JAVA</ID>
-              <OriginalElement>Model.IMainModel</OriginalElement>
-              <nodes>
-                <node x="331.0" y="230.0">Model.IMainModel.StartAndStopListener</node>
-                <node x="232.0" y="0.0">Model.IMainModel</node>
-                <node x="594.0" y="274.0">Model.IMainModel.AddMomentToRouterAndHostListener</node>
-                <node x="0.0" y="274.0">Model.IMainModel.InitRoutersAndHostsListener</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="Model.IMainModel.AddMomentToRouterAndHostListener" target="Model.IMainModel">
-                  <point x="0.0" y="-35.0" />
-                  <point x="729.0" y="205.0" />
-                  <point x="599.5" y="205.0" />
-                  <point x="147.0" y="90.0" />
-                </edge>
-                <edge source="Model.IMainModel.StartAndStopListener" target="Model.IMainModel">
-                  <point x="0.0" y="-79.0" />
-                  <point x="0.0" y="90.0" />
-                </edge>
-                <edge source="Model.IMainModel.InitRoutersAndHostsListener" target="Model.IMainModel">
-                  <point x="0.0" y="-35.0" />
-                  <point x="155.5" y="205.0" />
-                  <point x="305.5" y="205.0" />
-                  <point x="-147.0" y="90.0" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="1.0" x="105.5" y="59.5" />
-              <SelectedNodes>
-                <node>Model.IMainModel</node>
-              </SelectedNodes>
-              <Categories>
-                <Category>Fields</Category>
-                <Category>Constructors</Category>
-                <Category>Methods</Category>
-                <Category>Properties</Category>
-                <Category>Inner Classes</Category>
-              </Categories>
-              <SCOPE>All</SCOPE>
-              <VISIBILITY>private</VISIBILITY>
+        <entry file="file://$PROJECT_DIR$/src/View/MomentsView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="754">
+              <caret line="71" column="26" selection-start-line="71" selection-start-column="15" selection-end-line="71" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1611#1612#0" expanded="true" />
+                <element signature="e#1645#1646#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/impl/RouterInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="73" selection-start-line="73" selection-end-line="73" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#588#589#0" expanded="true" />
+                <element signature="e#615#616#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Bean/Message.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="167">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+              <folding>
+                <element signature="e#360#361#0" expanded="true" />
+                <element signature="e#820#821#0" expanded="true" />
+                <element signature="e#850#851#0" expanded="true" />
+                <element signature="e#885#886#0" expanded="true" />
+                <element signature="e#916#917#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Bean/Memory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -213,39 +174,39 @@
         <option value="$PROJECT_DIR$/src/Model/IMain.java" />
         <option value="$PROJECT_DIR$/src/Util/PrintUtil.java" />
         <option value="$PROJECT_DIR$/src/Bean/RouteTable.java" />
-        <option value="$PROJECT_DIR$/src/Model/IRouter.java" />
         <option value="$PROJECT_DIR$/src/Model/impl/Main.java" />
         <option value="$PROJECT_DIR$/src/View/IMemoryCircleView.java" />
         <option value="$PROJECT_DIR$/src/APP.java" />
         <option value="$PROJECT_DIR$/src/View/mainviewform.form" />
         <option value="$PROJECT_DIR$/src/Configure/ViewConfigure.java" />
         <option value="$PROJECT_DIR$/src/Util/IRandomUtil.java" />
-        <option value="$PROJECT_DIR$/src/Util/RandomUtil.java" />
         <option value="$PROJECT_DIR$/src/View/IMomentsView.java" />
         <option value="$PROJECT_DIR$/src/test/Model/impl/MainTest.java" />
         <option value="$PROJECT_DIR$/src/Listener/RouterAndHostMomentStrListener.java" />
         <option value="$PROJECT_DIR$/src/Model/IMainModel.java" />
         <option value="$PROJECT_DIR$/src/Bean/Message.java" />
-        <option value="$PROJECT_DIR$/src/View/SwichButton.java" />
-        <option value="$PROJECT_DIR$/src/View/IMainView.java" />
-        <option value="$PROJECT_DIR$/src/Presenter/MainPresenter.java" />
-        <option value="$PROJECT_DIR$/src/Presenter/IMainPresenter.java" />
-        <option value="$PROJECT_DIR$/src/View/MemoryCircleView.java" />
-        <option value="$PROJECT_DIR$/src/View/MainView.java" />
         <option value="$PROJECT_DIR$/src/Bean/Moment.java" />
-        <option value="$PROJECT_DIR$/src/Model/IHost.java" />
         <option value="$PROJECT_DIR$/src/test/Model/impl/HostTest.java" />
-        <option value="$PROJECT_DIR$/src/Model/impl/MainModel.java" />
-        <option value="$PROJECT_DIR$/src/Model/impl/Host.java" />
-        <option value="$PROJECT_DIR$/src/View/MomentsView.java" />
         <option value="$PROJECT_DIR$/src/Configure/RouterAndHostConfig.java" />
         <option value="$PROJECT_DIR$/src/Configure/RouterAndHostConfige.java" />
         <option value="$PROJECT_DIR$/src/Bean/ReceiveAndSend.java" />
+        <option value="$PROJECT_DIR$/src/View/MemoryCircleView.java" />
         <option value="$PROJECT_DIR$/src/Model/IRouteInterface.java" />
+        <option value="$PROJECT_DIR$/src/Model/impl/MainModel.java" />
+        <option value="$PROJECT_DIR$/src/Presenter/IMainPresenter.java" />
+        <option value="$PROJECT_DIR$/src/Presenter/MainPresenter.java" />
+        <option value="$PROJECT_DIR$/src/View/IMainView.java" />
         <option value="$PROJECT_DIR$/src/Model/impl/RouterInterface.java" />
-        <option value="$PROJECT_DIR$/src/Model/impl/Router.java" />
+        <option value="$PROJECT_DIR$/src/Model/IRouter.java" />
+        <option value="$PROJECT_DIR$/src/View/SwichButton.java" />
+        <option value="$PROJECT_DIR$/src/Util/RandomUtil.java" />
+        <option value="$PROJECT_DIR$/src/Model/IHost.java" />
+        <option value="$PROJECT_DIR$/src/Model/impl/Host.java" />
         <option value="$PROJECT_DIR$/src/Bean/Memory.java" />
+        <option value="$PROJECT_DIR$/src/Model/impl/Router.java" />
         <option value="$PROJECT_DIR$/src/Configure/RouterAndHostConfigure.java" />
+        <option value="$PROJECT_DIR$/src/View/MomentsView.java" />
+        <option value="$PROJECT_DIR$/src/View/MainView.java" />
       </list>
     </option>
   </component>
@@ -261,7 +222,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -327,6 +287,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -450,7 +411,8 @@
       <workItem from="1555335202039" duration="5606000" />
       <workItem from="1555412395287" duration="12149000" />
       <workItem from="1555467761915" duration="25881000" />
-      <workItem from="1555560946562" duration="10027000" />
+      <workItem from="1555560946562" duration="10341000" />
+      <workItem from="1555637549914" duration="4497000" />
     </task>
     <servers />
   </component>
@@ -472,7 +434,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55897000" />
+    <option name="totallyTimeSpent" value="60708000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -485,8 +447,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18955651" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19170243" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -495,15 +458,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.15060242" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.25662652" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.17590362" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.036144577" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.26746988" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32891566" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32891566" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49928468" visible="true" weight="0.43012047" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49928468" weight="0.43012047" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5007153" side_tool="true" weight="0.24457832" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32891566" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -551,14 +514,19 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Model/impl/Router.java</url>
+          <line>80</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/concurrent/ScheduledExecutorService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-373">
-          <caret line="110" column="45" selection-start-line="110" selection-start-column="45" selection-end-line="110" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Util/PrintUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -651,13 +619,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Configure/ViewConfigure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="64" selection-start-line="12" selection-start-column="64" selection-end-line="12" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Util/IRandomUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -734,120 +695,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bean/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
-          <folding>
-            <element signature="e#324#325#0" expanded="true" />
-            <element signature="e#360#361#0" expanded="true" />
-            <element signature="e#850#851#0" expanded="true" />
-            <element signature="e#821#822#0" expanded="true" />
-            <element signature="e#852#853#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/text/NumberFormat.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
           <caret line="289" column="24" selection-start-line="289" selection-start-column="24" selection-end-line="289" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/SwichButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="41" column="31" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Presenter/IMainPresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="32" column="75" selection-start-line="32" selection-start-column="75" selection-end-line="32" selection-end-column="75" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/IMainView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="71" selection-start-line="12" selection-start-column="71" selection-end-line="12" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Presenter/MainPresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="14" column="155" lean-forward="true" selection-start-line="14" selection-start-column="155" selection-end-line="14" selection-end-column="155" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Util/RandomUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="94" column="33" selection-start-line="94" selection-start-column="33" selection-end-line="94" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3877#3878#0" expanded="true" />
-            <element signature="e#3936#3937#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bean/Moment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="57" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
-          <folding>
-            <element signature="e#333#334#0" expanded="true" />
-            <element signature="e#369#370#0" expanded="true" />
-            <element signature="e#403#404#0" expanded="true" />
-            <element signature="e#436#437#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/MemoryCircleView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="88" column="27" selection-start-line="88" selection-start-column="27" selection-end-line="88" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/MainView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2901">
-          <caret line="284" column="45" selection-start-line="284" selection-start-column="45" selection-end-line="284" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#initMemoryCircleViews#0;class#MainView#0" />
-            <element signature="method#setDiyBackGround#0;class#MainView#0" />
-            <element signature="method#enableOSXFullscreen#0;class#MainView#0" />
-            <element signature="method#requestOSXFullscreen#0;class#MainView#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/impl/MainModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="94" column="34" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -858,43 +709,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/MomentsView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="113" column="57" selection-start-line="113" selection-start-column="55" selection-end-line="113" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/IHost.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bean/ReceiveAndSend.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/impl/RouterInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="54" column="46" selection-start-line="54" selection-start-column="46" selection-end-line="54" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bean/ReceiveAndSend.java" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/Vector.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-274">
@@ -902,31 +717,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/IRouteInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="60" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
+    <entry file="uml://JAVA/Model.IRouter">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>Model.IRouter</OriginalElement>
+          <nodes>
+            <node x="" y="">Model.IRouter</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="147.0" y="68.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bean/Memory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="58" column="19" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#385#386#0" expanded="true" />
-            <element signature="e#436#437#0" expanded="true" />
-            <element signature="e#474#475#0" expanded="true" />
-            <element signature="e#516#517#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Configure/RouterAndHostConfigure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="48" lean-forward="true" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+    <entry file="uml://JAVA/Model.impl.Host">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>Model.impl.Host</OriginalElement>
+          <nodes>
+            <node x="119.5" y="0.0">Model.IHost</node>
+            <node x="0.0" y="186.0">Model.impl.Host</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="Model.impl.Host" target="Model.IHost">
+              <point x="0.0" y="-212.0" />
+              <point x="0.0" y="68.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.9142857142857143" x="-92.0" y="243.0" />
+          <SelectedNodes>
+            <node>Model.impl.Host</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
@@ -937,8 +778,8 @@
           <OriginalElement>Model.impl.Router</OriginalElement>
           <nodes>
             <node x="67.5" y="186.0">Model.impl.Router</node>
-            <node x="353.0" y="0.0">Model.IRouter</node>
             <node x="0.0" y="44.0">Model.IRouteInterface.UpdateInputMessageMomentListener</node>
+            <node x="353.0" y="0.0">Model.IRouter</node>
           </nodes>
           <notes />
           <edges>
@@ -955,8 +796,10 @@
               <point x="0.0" y="68.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="-3.5" y="126.5" />
-          <SelectedNodes />
+          <settings layout="Hierarchic Group" zoom="0.7207207207207207" x="323.0" y="261.0" />
+          <SelectedNodes>
+            <node>Model.impl.Router</node>
+          </SelectedNodes>
           <Categories>
             <Category>Fields</Category>
             <Category>Constructors</Category>
@@ -964,47 +807,13 @@
           </Categories>
           <SCOPE>All</SCOPE>
           <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/Model.IRouter">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>Model.IRouter</OriginalElement>
-          <nodes>
-            <node x="" y="">Model.IRouter</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="146.5" y="68.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Fields</Category>
-            <Category>Constructors</Category>
-            <Category>Methods</Category>
-            <Category>Properties</Category>
-            <Category>Inner Classes</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/IRouter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/IMainModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="14" column="47" lean-forward="true" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+          <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1041,7 +850,7 @@
               <point x="-147.0" y="90.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="105.5" y="59.5" />
+          <settings layout="Hierarchic Group" zoom="0.5429864253393665" x="432.00000000000006" y="194.0" />
           <SelectedNodes>
             <node>Model.IMainModel</node>
           </SelectedNodes>
@@ -1057,52 +866,214 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/impl/Router.java">
+    <entry file="file://$PROJECT_DIR$/src/View/MemoryCircleView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="849">
-          <caret line="118" column="123" selection-start-line="118" selection-start-column="123" selection-end-line="118" selection-end-column="123" />
+        <state relative-caret-position="153">
+          <caret line="75" column="32" selection-start-line="75" selection-start-column="32" selection-end-line="75" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="uml://JAVA/Model.impl.Host">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>Model.impl.Host</OriginalElement>
-          <nodes>
-            <node x="119.5" y="0.0">Model.IHost</node>
-            <node x="0.0" y="186.0">Model.impl.Host</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="Model.impl.Host" target="Model.IHost">
-              <point x="0.0" y="-212.0" />
-              <point x="0.0" y="68.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.9142857142857143" x="-91.609375" y="242.5" />
-          <SelectedNodes>
-            <node>Model.impl.Host</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Fields</Category>
-            <Category>Constructors</Category>
-            <Category>Methods</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
+    <entry file="file://$PROJECT_DIR$/src/Model/IRouteInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Presenter/IMainPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/IMainView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/IRouter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/SwichButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="60" column="53" selection-start-line="60" selection-start-column="53" selection-end-line="60" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Util/RandomUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="102" column="115" selection-start-line="102" selection-start-column="115" selection-end-line="102" selection-end-column="115" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/concurrent/ScheduledExecutorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="180" column="30" selection-start-line="180" selection-start-column="30" selection-end-line="180" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/IHost.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/impl/Host.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="111" column="66" selection-start-line="111" selection-start-column="39" selection-end-line="111" selection-end-column="66" />
+        <state relative-caret-position="167">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#907#908#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bean/Moment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#333#334#0" expanded="true" />
+            <element signature="e#369#370#0" expanded="true" />
+            <element signature="e#403#404#0" expanded="true" />
+            <element signature="e#436#437#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Presenter/MainPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="100" selection-start-line="100" selection-end-line="100" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/impl/MainModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="122" selection-start-line="122" selection-end-line="122" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Configure/ViewConfigure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="64" selection-start-line="12" selection-start-column="64" selection-end-line="12" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bean/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#360#361#0" expanded="true" />
+            <element signature="e#820#821#0" expanded="true" />
+            <element signature="e#850#851#0" expanded="true" />
+            <element signature="e#885#886#0" expanded="true" />
+            <element signature="e#916#917#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/impl/RouterInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#588#589#0" expanded="true" />
+            <element signature="e#615#616#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bean/Memory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/impl/Router.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="80" column="45" selection-start-line="80" selection-start-column="45" selection-end-line="80" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3959#3960#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Configure/RouterAndHostConfigure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/MomentsView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="754">
+          <caret line="71" column="26" selection-start-line="71" selection-start-column="15" selection-end-line="71" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1611#1612#0" expanded="true" />
+            <element signature="e#1645#1646#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/MainView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="179" column="84" selection-start-line="179" selection-start-column="84" selection-end-line="179" selection-end-column="84" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initMemoryCircleViews#0;class#MainView#0" />
+            <element signature="method#setDiyBackGround#0;class#MainView#0" />
+            <element signature="method#enableOSXFullscreen#0;class#MainView#0" />
+            <element signature="method#requestOSXFullscreen#0;class#MainView#0" />
           </folding>
         </state>
       </provider>

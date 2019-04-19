@@ -9,12 +9,16 @@ import java.util.Vector;
  * @date 2019-04-15
  */
 public class Memory {
-    private int memorySize;
-    private Vector<Message> messageVector;
-    private volatile float curSize;
+    private double memorySize;
+    private final Vector<Message> messageVector;
+    private volatile double curSize;
 
 
-    public float getMemoryPercentage() {
+    public double getMemoryPercentage() {
+
+        if (memorySize - curSize < 0.5) {
+            return 100;
+        }
         return (curSize / memorySize) * 100;
     }
 
@@ -28,7 +32,6 @@ public class Memory {
             return null;
         } else {
             Message message = messageVector.lastElement();
-            messageVector.remove(message);
             return message;
         }
     }
@@ -38,18 +41,22 @@ public class Memory {
     }
 
     public boolean removeMessageFromMemory(Message message) {
-        if (messageVector.lastElement() != null && messageVector.lastElement().equals(message)) {
-            messageVector.remove(messageVector.lastElement());
-            curSize -= message.getContent().length();
-            return true;
+
+        synchronized (messageVector) {
+            if (messageVector.contains(message)) {
+                messageVector.remove(message);
+                curSize -= message.getContent().length();
+                return true;
+            }
         }
+
         return false;
     }
 
     /**
      * @param memorySize :默认传入的单位为M，需要将其转化为字节。
      */
-    public Memory(int memorySize) {
+    public Memory(double memorySize) {
         this.memorySize = memorySize * 1024 * 1024;
         this.messageVector = new Vector<>();
         this.curSize = 0;

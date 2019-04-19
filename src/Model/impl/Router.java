@@ -7,11 +7,13 @@ import Configure.RouterAndHostConfigure;
 import Listener.RouterAndHostMomentStrListener;
 import Model.IRouteInterface;
 import Model.IRouter;
+import Util.PrintUtil;
 import Util.RandomUtil;
 
 import java.util.ArrayList;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
+import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -71,18 +73,32 @@ public class Router implements IRouter, IRouteInterface.UpdateInputMessageMoment
     @Override
     public void readAndHandleMemory() {
 
-
         int interfaceIndex = RandomUtil.getInstance().randInt(0, 3);
         RouterInterface curInterface = routerInterfaceList.get(interfaceIndex);
         Memory memory = curInterface.getMemory();
         Message message = memory.getMessage();
         if (message != null) {
             if (sendMessageToHost(message)) {
-                memory.removeMessageFromMemory(message);
+                boolean flag=memory.removeMessageFromMemory(message);
             }
         }
 
     }
+
+    @Override
+    public void readAndHandleMemoryProxt() {
+
+        try {
+            for (int index = 0; index < RouterAndHostConfigure.messageCountReadPerSecondOfRouter; index++) {
+
+                readAndHandleMemory();
+            }
+        } catch (Exception e) {
+            PrintUtil.printLn("Exception-readAndHandleMemoryProxt:" + e.getLocalizedMessage());
+        }
+
+    }
+
 
     @Override
     public boolean sendMessageToHost(Message message) {
@@ -100,8 +116,10 @@ public class Router implements IRouter, IRouteInterface.UpdateInputMessageMoment
 
     @Override
     public void startReadMemoryTask() {
+
+
         scheduledExecutorService = new ScheduledThreadPoolExecutor(1);
-        scheduledExecutorService.scheduleWithFixedDelay(this::readAndHandleMemory, 0, RouterAndHostConfigure.periodOfRouterReadMemory, TimeUnit.SECONDS);
+        scheduledExecutorService.scheduleWithFixedDelay(this::readAndHandleMemoryProxt, 0, RouterAndHostConfigure.periodOfRouterReadMemory, TimeUnit.MICROSECONDS);
     }
 
     @Override

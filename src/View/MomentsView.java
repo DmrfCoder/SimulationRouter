@@ -33,14 +33,14 @@ public class MomentsView extends JComponent implements IMomentsView {
 
     private volatile int curCount;
 
-    public MomentsView(int hostId, String hostIp, int type, int momentsMaxCount) {
+    public MomentsView(int hostId, String hostIp, int type, int momentsMaxCount,int windowWidth) {
         this.hostId = hostId;
         this.hostIp = hostIp;
         this.momentsMaxCount = momentsMaxCount;
         this.type = type;
 
         windowHeight = (momentsMaxCount + 2) * textHeight;
-        windowWidth = 400;
+        this.windowWidth = windowWidth;
         moments = new Vector<>();
         curCount = 0;
         initView();
@@ -56,7 +56,7 @@ public class MomentsView extends JComponent implements IMomentsView {
         this.hostPort = hostPort;
 
         windowHeight = (momentsMaxCount + 1) * textHeight;
-        windowWidth = 400;
+        windowWidth = 300;
         moments = new Vector<>();
         curCount = 0;
         initView();
@@ -122,7 +122,7 @@ public class MomentsView extends JComponent implements IMomentsView {
 
                 g.drawString(time.substring(11) + ":" + moments.get(index).getMomentContent(), 0, itemY);
             } catch (Exception e) {
-                System.out.println("Exception-MomentView-paint");
+                System.out.println("Exception-MomentView-paint:"+e.getLocalizedMessage());
             }
 
         }
